@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dealer Wuling Premium | Alwi Sofyan</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{font-family:Poppins, sans-serif;background:#0b0b0b;color:white}
+
+.hero-bg{
+background:url('https://i.ibb.co.com/fG2TVmvj/Tampilan.jpg') center/cover no-repeat;
+position:relative;
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.55);
+}
+
+.card{transition:0.3s}
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 20px 40px rgba(255,0,0,0.3)
+}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+align-items:center;
+justify-content:center;
+z-index:999;
+}
+
+.modal-content{
+background:#111;
+padding:30px;
+border-radius:20px;
+text-align:center;
+max-width:450px;
+width:90%;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="flex justify-between items-center px-10 py-5 bg-black/80 sticky top-0">
+<h1 class="text-2xl font-bold text-red-500">ALWI SOFYAN</h1>
+<a href="https://wa.me/6285771430929?text=Halo%20Saya%20mau%20tanya%20mobil%20Wuling" target="_blank" class="bg-green-500 px-5 py-2 rounded-full">WhatsApp</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero-bg min-h-screen flex items-center justify-center text-center">
+
+<div class="hero-overlay"></div>
+
+<div class="relative z-10 flex flex-col items-center px-6 -mt-24">
+
+<h2 class="text-4xl md:text-5xl font-bold mb-4 tracking-wide">
+Dealer Resmi Wuling ZHC
+</h2>
+
+<p class="text-base md:text-lg mb-6 text-gray-200">
+Promo Terbaik • Harga Terbaik • Proses Cepat • Pelayanan Profesional
+</p>
+
+<div class="h-44 md:h-56"></div>
+
+<a href="https://wa.me/6285771430929?text=Halo%20Saya%20mau%20tanya%20promo%20Wuling"
+target="_blank"
+class="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-full text-base font-semibold shadow-lg">
+Chat WhatsApp Sekarang
+</a>
+
+</div>
+</section>
+
+<!-- MOBIL -->
+<section id="mobil" class="px-10 py-20 text-center">
+<h2 class="text-4xl mb-10 font-bold">Pilihan Mobil</h2>
+<div class="grid md:grid-cols-3 gap-10">
+
+<!-- 1 -->
+<div onclick="show('New Darion PHEV', [
+{type:'CE Darion', harga:'Rp 449.000.000'},
+{type:'EX PHEV', harga:'Rp 499.000.000'}
+])" class="card bg-zinc-900 p-6 rounded-2xl cursor-pointer">
+<img src="https://i.ibb.co.com/qYtpsXfr/Mobil-1.jpg" class="rounded-xl mb-4">
+<h3 class="text-xl font-bold">New Darion PHEV</h3>
+</div>
+
+<!-- 2 -->
+<div onclick="show('New Binguo EV', [
+{type:'LITE', harga:'Rp 318.000.000'},
+{type:'PRO', harga:'Rp 363.000.000'}
+])" class="card bg-zinc-900 p-6 rounded-2xl cursor-pointer">
+<img src="https://i.ibb.co.com/cKnn5CGC/Mobil-2.jpg" class="rounded-xl mb-4">
+<h3 class="text-xl font-bold">New Binguo EV</h3>
+</div>
+
+<!-- 3 -->
+<div onclick="show('New Cloud EV', [
+{type:'LITE', harga:'Rp 415.000.000'},
+{type:'PRO', harga:'Rp 443.000.000'}
+])" class="card bg-zinc-900 p-6 rounded-2xl cursor-pointer">
+<img src="https://i.ibb.co.com/84g5c8Cw/Mobil-3.jpg" class="rounded-xl mb-4">
+<h3 class="text-xl font-bold">New Cloud EV</h3>
+</div>
+
+<!-- 4 -->
+<div onclick="show('New Confero S', [
+{type:'CONFERO DB', harga:'Rp 188.300.000'},
+{type:'CONFERO S-C', harga:'Rp 210.700.000'},
+{type:'CONFERO S-L MT', harga:'Rp 225.850.000'},
+{type:'CONFERO S-L CVT', harga:'Rp 235.300.000'}
+])" class="card bg-zinc-900 p-6 rounded-2xl cursor-pointer">
+<img src="https://i.ibb.co.com/fd3jY9PK/Mobil-4.jpg" class="rounded-xl mb-4">
+<h3 class="text-xl font-bold">New Confero S</h3>
+</div>
+
+<!-- 5 -->
+<div onclick="show('New Almaz RS', [
+{type:'NEW ALMAZ RS PRO', harga:'Rp 405.000.000'},
+{type:'NEW ALMAZ RS HYBRID', harga:'Rp 445.000.000'}
+])" class="card bg-zinc-900 p-6 rounded-2xl cursor-pointer">
+<img src="https://i.ibb.co.com/3yRm6qMm/Mobil-5.jpg" class="rounded-xl mb-4">
+<h3 class="text-xl font-bold">New Almaz RS</h3>
+</div>
+
+<!-- 6 -->
+<div onclick="show('New Cortez', [
+{type:'NEW CORTEZ SE', harga:'Rp 266.500.000'},
+{type:'NEW CORTEZ CE', harga:'Rp 307.300.000'},
+{type:'NEW CORTEZ EX', harga:'Rp 345.650.000'}
+])" class="card bg-zinc-900 p-6 rounded-2xl cursor-pointer">
+<img src="https://i.ibb.co.com/xKff8p35/Mobil-6.jpg" class="rounded-xl mb-4">
+<h3 class="text-xl font-bold">New Cortez</h3>
+</div>
+
+<!-- 7 -->
+<div onclick="show('New Mitra EV', [
+{type:'MITRA EV MB 300', harga:'Rp 348.000.000'},
+{type:'MITRA EV MB 400', harga:'Rp 378.000.000'},
+{type:'MITRA EV BV 300', harga:'Rp 328.000.000'},
+{type:'MITRA EV BV 400', harga:'Rp 358.000.000'}
+])" class="card bg-zinc-900 p-6 rounded-2xl cursor-pointer">
+<img src="https://i.ibb.co.com/Cpb2qvtd/Mobil-7.jpg" class="rounded-xl mb-4">
+<h3 class="text-xl font-bold">New Mitra EV</h3>
+</div>
+
+<!-- 8 -->
+<div onclick="show('New Alvez', [
+{type:'ALVEZ SE', harga:'Rp 217.000.000'},
+{type:'ALVEZ CE', harga:'Rp 263.000.000'},
+{type:'ALVEZ EX', harga:'Rp 303.000.000'}
+])" class="card bg-zinc-900 p-6 rounded-2xl cursor-pointer">
+<img src="https://i.ibb.co.com/SXb6sYWh/Mobil-8.jpg" class="rounded-xl mb-4">
+<h3 class="text-xl font-bold">New Alvez</h3>
+</div>
+
+<!-- 9 -->
+<div onclick="show('New Darion EV', [
+{type:'DARION CE', harga:'Rp 399.000.000'},
+{type:'DARION EX', harga:'Rp 459.000.000'}
+])" class="card bg-zinc-900 p-6 rounded-2xl cursor-pointer">
+<img src="https://i.ibb.co.com/4HyN0wT/Mobil-9.jpg" class="rounded-xl mb-4">
+<h3 class="text-xl font-bold">New Darion EV</h3>
+</div>
+
+<!-- 10 -->
+<div onclick="show('New Air EV', [
+{type:'LITE 200', harga:'Rp 214.000.000'},
+{type:'LITE 300', harga:'Rp 251.000.000'},
+{type:'PRO 300', harga:'Rp 307.500.000'}
+])" class="card bg-zinc-900 p-6 rounded-2xl cursor-pointer">
+<img src="https://i.ibb.co.com/qFjhBJ7j/Mobil-10.jpg" class="rounded-xl mb-4">
+<h3 class="text-xl font-bold">New Air EV</h3>
+</div>
+
+</div>
+</section>
+
+<!-- PROMO -->
+<section class="bg-red-600 text-center py-20">
+<h2 class="text-4xl font-bold mb-6">🔥 PROMO SPESIAL 🔥</h2>
+<p class="text-lg">🎁 Bonus Aksesoris Gratis</p>
+<p class="text-lg">💰 Diskon Di Setiap Pembelian</p>
+<p class="text-lg">🚗 Gratis Test Drive</p>
+<p class="text-lg">⚡ Proses Cepat & Mudah</p>
+</section>
+
+<!-- KONSULTAN SALES -->
+<section class="px-10 py-20 bg-zinc-900 text-center">
+<h2 class="text-4xl font-bold mb-10">Konsultan Sales</h2>
+<div class="max-w-3xl mx-auto">
+<img src="https://i.ibb.co.com/S7wryFjP/Pribadi.jpg" class="w-40 h-40 rounded-full mx-auto mb-6 object-cover">
+<h3 class="text-2xl font-bold mb-3">Alwi Sofyan</h3>
+<p class="mb-4">Sales Resmi Mobil Wuling ZHC dengan pelayanan ramah, cepat, dan terpercaya.</p>
+<a href="https://wa.me/6285771430929?text=Halo%20Pak%20Alwi%20Saya%20mau%20tanya%20mobil%20Wuling" target="_blank" class="bg-green-500 px-8 py-4 rounded-full inline-block mt-6">Hubungi Sekarang</a>
+</div>
+</section>
+
+<footer class="text-center py-10 bg-black">
+<p>Alwi Sofyan - Konsultan Wuling</p>
+<p>085771430929</p>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal" onclick="closeModal()">
+<div class="modal-content" onclick="event.stopPropagation()">
+<h2 id="nama" class="text-2xl mb-6 font-bold"></h2>
+<div id="harga"></div>
+<a id="wa" target="_blank" class="bg-green-500 px-6 py-3 rounded-full inline-block mt-6">
+Chat WhatsApp
+</a>
+</div>
+</div>
+
+<script>
+function show(nama, dataType){
+document.getElementById('modal').style.display='flex';
+document.getElementById('nama').innerText=nama;
+
+let html="";
+dataType.forEach(function(item){
+html+=`
+<div class="flex justify-between items-center bg-black p-3 rounded mb-3">
+<span class="font-semibold">${item.type}</span>
+<span class="text-red-500 font-bold">${item.harga}</span>
+</div>
+`;
+});
+document.getElementById('harga').innerHTML=html;
+
+let pesan = `Halo Pak Alwi, saya tertarik dengan ${nama}. Mohon info lebih lanjut.`;
+document.getElementById('wa').href =
+"https://wa.me/6285771430929?text=" + encodeURIComponent(pesan);
+}
+
+function closeModal(){
+document.getElementById('modal').style.display='none';
+}
+</script>
+
+</body>
+</html>
